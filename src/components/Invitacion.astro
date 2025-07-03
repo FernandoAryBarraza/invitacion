@@ -1,0 +1,71 @@
+---
+import { Image } from 'astro:assets';
+import Anillos from '../assets/anillos.png';
+import Confetti from '../assets/confetti.png';
+
+import '../styles/global.css';
+---
+<section class="w-[90%] max-w-7xl mx-auto py-6 mt-8" id="invitacion">
+    <h2 class="line relative text-white mb-5 text-5xl pb-2 text-shadow text-center">Invitación</h2>
+    <article class=" w-full p-6 flex flex-col gap-4 mt-6 lg:flex-row lg:gap-12 lg:items-center">
+        <div class="w-full bg-white/50 rounded-2xl px-4 py-2.5 md:p-6 backdrop-blur-sm">
+            <div class="svg w-20 h-20 md:w-20 md:h-20 lg:w-24 lg:h-24">
+                <Image src={Anillos} alt="Anillos de boda" loading="lazy" />
+            </div>
+            <h3 class="line relative text-white mb-5 text-3xl md:text-5xl pb-2 text-shadow">Civil</h3>             
+            <div class="grid gap-2.5 md:gap-6">
+                <div class="bg-white/50 rounded-lg p-2.5 md:p-5 backdrop-blur-sm">
+                    <h4 class="text-purple-950 mb-2 text-lg md:text-xl">Día</h4>
+                    <p class="text-sm md:text-lg">6 de Junio de 2025</p>
+                    <p class="text-sm md:text-lg"><strong>Hora:</strong> 11:30 AM</p>
+                </div>
+                <div class="bg-white/50 rounded-lg p-2.5 md:p-5 backdrop-blur-sm">
+                    <h4 class="text-purple-950 mb-2 text-lg md:text-xl">Lugar</h4>
+                    <p class="text-sm md:text-lg">Registro Civil | Rodeo de la Cruz</p>                            
+                </div>
+                <div class="bg-white/50 rounded-lg p-2.5 md:p-5 backdrop-blur-sm">
+                    <h4 class="text-purple-950 mb-2 text-lg md:text-xl">Dirección</h4>
+                    <p class="mb-1 text-sm md:text-lg">Carril Nacional 8217</p>
+                    <a class="btn text-sm md:text-lg p-3 md:px-5 md:py-3" href="https://maps.app.goo.gl/UwJkWUNmUVwmHr3G6" target="_blank">¿Cómo llegar?</a>
+                </div>
+            </div>
+        </div>
+        <div class="w-full bg-white/50 rounded-2xl px-4 py-2.5 md:p-6 backdrop-blur-sm">
+            <div class="svg w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24">
+                <Image src={Confetti} alt="Confetti de celebración" loading="lazy" />
+            </div>
+            <h3 class="line relative text-white mb-5 text-5xl pb-2 text-shadow">Fiesta</h3>
+            <div class="grid gap-2.5 md:gap-6">
+                <div class="bg-white/50 rounded-lg p-2.5 md:p-5 backdrop-blur-sm">
+                    <h4 class="text-purple-950 mb-2 text-lg md:text-xl">Día</h4>
+                    <p class="text-sm md:text-lg">6 de Junio de 2025</p>
+                    <p class="text-sm md:text-lg"><strong>Hora:</strong> 8:00 PM</p>                            
+                </div>
+                <div class="bg-white/50 rounded-lg p-2.5 md:p-5 backdrop-blur-sm">
+                    <h4 class="text-purple-950 mb-2 text-lg md:text-xl">Lugar</h4>
+                    <p class="text-sm md:text-lg">Iglesia de Jesucristo de los Santos de los Últimos Días</p>                            
+                </div>
+                <div class="bg-white/50 rounded-lg p-2.5 md:p-5 backdrop-blur-sm">
+                    <h4 class="text-purple-950 mb-2 text-lg md:text-xl">Dirección</h4>
+                    <p class="mb-1 text-sm md:text-lg">Manuel Videla 65 | Rodeo de la Cruz</p>
+                    <a class="btn text-sm md:text-lg p-3 md:px-5 md:py-3" href="https://maps.app.goo.gl/WXKs7wrFTcCZunR8A" target="_blank">¿Cómo llegar?</a>
+                </div>
+            </div>
+        </div>                     
+    </article>
+</section>
+<style>
+.svg {
+    margin: 0 auto 1rem;
+    animation: latido 1s infinite ease-in-out;
+    transform-origin: center;
+}
+
+@keyframes latido {
+    0%, 30% { transform: scale(1); }
+    40% { transform: scale(1.1); }
+    50% { transform: scale(1); }
+    60% { transform: scale(1.2); }
+    70%, 100% { transform: scale(1); }
+}
+</style> 

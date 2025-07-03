@@ -1,0 +1,74 @@
+---
+import '../styles/global.css';
+
+import PhotoCarousel from './PhotoCarousel.tsx';
+
+import AliciaBebe from '../assets/Ali-Brandon/Alicia-beba.webp';
+import BrandonBebe from '../assets/Ali-Brandon/Brandon-bebe.webp';
+import AliciaPlaza from '../assets/Ali-Brandon/Alicia-Plaza.webp';
+import BrandonNino from '../assets/Ali-Brandon/Brandon-niño.webp';
+import AliElda from '../assets/Ali-Brandon/Ali-Elda.webp';
+import AliciaEscuela from '../assets/Ali-Brandon/Alicia_Escuela.webp';
+import BrandonComidaRapida from '../assets/Ali-Brandon/Brandon-comida-rapida.jpg';
+import TemazoAli from '../assets/Ali-Brandon/Temazo-Ali.webp';
+import BrandonMision from '../assets/Ali-Brandon/Brandon-mision.jpg';
+import SCabralSBarraza from '../assets/Ali-Brandon/S_Cabral-S_Barraza.jpg';
+import MisionBrandon from '../assets/Ali-Brandon/Mision-Brandon.jpg';
+import AliBrandonEscuela from '../assets/AyB-juntos/ALicia-Brandon-escuela.jpg';
+import BrandonAliciaAnillos2 from '../assets/AyB-juntos/Brandon-Alicia-anillos-2.jpg';
+import AliciaBrandonIglesia from '../assets/AyB-juntos/Alicia-Brandon-iglesia.jpg';
+import BrandonAliciaAnillos from '../assets/AyB-juntos/Brandon-Alicia-anillos.jpg';
+import AliciaBrandonPileta from '../assets/AyB-juntos/Alicia-Brandon-pileta.jpg';
+import SelfieBrandonAlicia from '../assets/AyB-juntos/Selfie-Brandon-Alicia.jpg';
+import PreMisionAlicia from '../assets/AyB-juntos/PreMision_Alicia.webp';
+import AliciaBrandonTemploMza from '../assets/AyB-juntos/Alicia-Brandon-Templo-Mza.webp';
+import FelicesCivil from '../assets/casados/Felices-Civil.jpg';
+import AnillosCivil from '../assets/casados/Anillos-civil.webp';
+import BesoAmor from '../assets/casados/beso-amor.webp';
+import AliciaBrandonCivil from '../assets/casados/Alicia-Brandon-Civil.webp';
+import AmigasChile from '../assets/casados/amigas-chile.webp';
+import AbrazoAliAry from '../assets/casados/Abrazo-Ali-Ary.jpg';
+import ChuchuTello from '../assets/casados/Chuchu-Tello.webp';
+import HermanosCivil from '../assets/casados/hermanos-civil.webp';
+import MisionerosSellados from '../assets/casados/Misioneros-Sellados.webp';
+import WaishmanSellador from '../assets/casados/Waishman-Sellador.webp';
+import RecienCasados from '../assets/casados/Recien-Casados.webp';
+import BarrazaTello from '../assets/casados/Barraza-Tello.webp';
+import AnaAngelAliciaBrandon from '../assets/casados/Ana-Angel-Alicia-Brandon.webp';
+import FamiliaresTello from '../assets/casados/Familiares-Tello.webp';
+import VillegasTelloHorizontal from '../assets/casados/Villegas-Tello-horizontal.webp';
+import PonceTelloHorizontal from '../assets/casados/Ponce-Tello-horizontal.webp';
+import OrianaTemplo from '../assets/casados/Oriana-Templo.webp';
+import Juntos from '../assets/casados/Juntos.webp';
+import GiulanaAB from '../assets/casados/Giulana-AB.webp';
+import FernandaCristina from '../assets/casados/Fernanda-Cristina.jpg';
+import SelladosEternidad from '../assets/casados/Sellados-Eternidad.webp';
+import FliaTelloHorizontal from '../assets/casados/Flia-Tello-horizontal.jpeg';
+
+const fotos1 = [AliciaBebe.src, BrandonBebe.src, AliciaPlaza.src, BrandonNino.src, AliElda.src, AliciaEscuela.src, BrandonComidaRapida.src, TemazoAli.src, BrandonMision.src, SCabralSBarraza.src, MisionBrandon.src];
+const fotos2 = [AliBrandonEscuela.src,BrandonAliciaAnillos2.src, AliciaBrandonIglesia.src, BrandonAliciaAnillos.src, AliciaBrandonPileta.src, SelfieBrandonAlicia.src, PreMisionAlicia.src, AliciaBrandonTemploMza.src];
+const fotos3 = [FelicesCivil.src, AnillosCivil.src, BesoAmor.src, AliciaBrandonCivil.src, AmigasChile.src, AbrazoAliAry.src, ChuchuTello.src, HermanosCivil.src, MisionerosSellados.src, WaishmanSellador.src];
+const fotos4 = [RecienCasados.src, BarrazaTello.src, AnaAngelAliciaBrandon.src, FamiliaresTello.src, VillegasTelloHorizontal.src, PonceTelloHorizontal.src, OrianaTemplo.src, Juntos.src, GiulanaAB.src, FernandaCristina.src, SelladosEternidad.src, FliaTelloHorizontal.src];
+---
+<section class="galeria" id="galeria">
+    <h2 class="line relative text-white mb-5 text-5xl pb-2 text-shadow text-center">Nuestros Momentos</h2>
+    <div class="scroller-container">
+            <!-- Fotos antes de casarse -->
+        <div class="scroller" data-direction="left" data-duration="slow">
+            <PhotoCarousel images={fotos1} className="carousel1" client:load />          
+        </div>
+            <!-- Fotos juntos -->
+        <div class="scroller" data-direction="left" data-duration="fast">
+            <PhotoCarousel images={fotos2} className="carousel2" client:load />            
+        </div>
+            <!-- Fotos Civil -->
+        <div class="scroller" data-direction="right" data-duration="slow">
+            <PhotoCarousel images={fotos3} className="carousel3" client:load />            
+        </div>
+            <!-- Fotos Templo -->
+        <div class="scroller" data-direction="right" data-duration="fast">
+            <PhotoCarousel images={fotos4} className="carousel4" client:load />            
+        </div>
+    </div>    
+    <!-- Todo el CSS de esta section está en global.css -->      
+</section>

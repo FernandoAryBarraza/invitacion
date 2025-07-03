@@ -1,0 +1,37 @@
+---
+import '../styles/global.css';
+import { Image } from 'astro:assets';
+import Casados from '../assets/casados/hero-casamiento.webp';
+---
+<section class="w-[90%] max-w-7xl mx-auto py-6 mt-8">
+    <h2 class="line relative text-white mb-5 text-5xl pb-2 text-shadow text-center">Casamiento</h2>
+    <article class="flex flex-col md:flex-row gap-6 lg:gap-8 lg:m-4">
+        <div class="text-gray-900 font-bold md:flex-1">
+            <p class="lg:text-2xl md:text-lg">
+                El matrimonio es un viaje lleno de amor, aprendizaje y crecimiento mutuo. 
+                Habrá días brillantes y otros desafiantes, pero recuerden que el amor no solo 
+                es un sentimiento, sino una decisión diaria de elegirse, respetarse y apoyarse 
+                incondicionalmente.        
+            </p>
+            <p class="lg:text-2xl md:text-lg">
+                Comuníquense con honestidad, cultiven la paciencia y no olviden reír juntos. 
+                Los pequeños detalles, la complicidad y el perdón serán sus aliados. El mejor equipo 
+                no es el que nunca falla, sino el que siempre se levanta unido.              
+            </p>
+            <p class="lg:text-2xl md:text-lg">
+                Que su amor sea un refugio de paz, su hogar un lugar de alegría y su futuro, 
+                una historia que construyan con fe y complicidad. ¡Que nuestro Padre Celestial los bendiga!
+            </p>
+            <p class="lg:text-2xl md:text-lg m-4">
+                <strong>
+                    Alicia y Brandon, 
+                    <br>                
+                ¡Felicitaciones por este hermoso paso que están dando!
+                </strong>
+            </p>
+        </div>    
+        <div class="bg-white/50 rounded-2xl px-4 py-2.5 md:p-6 backdrop-blur-sm lg:w-1/2 lg:max-w-md md:flex-1 h-full">
+            <Image class="w-full h-full object-cover " src={Casados} alt="Marido y mujer felices en el Templo" loading="lazy" />
+        </div>      
+    </article>
+</section>

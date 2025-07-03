@@ -1,22 +1,46 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props as Props;
+import '@fontsource-variable/jost';
+import '../styles/global.css';
+---
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sitio web para el casamiento de Alicia y Brandon">
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/global.css" />
+	<meta name="generator" content={Astro.generator} />
+	<title>{title}</title>
+	<link rel="canonical" href="https://alicia-brandon.ferchonte.com">
+	<meta name="theme-color" content="#fff">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@_ally_pato">
+	<meta name="twitter:creator" content="@_ally_pato">
+	<meta property="og:url" content="https://alicia-brandon.ferchonte.com">
+	<meta property="og:title" content="Alicia & Brandon - Nuestra Boda">
+	<meta property="og:description" content="Invitacion al casamiento de Alicia y Brandon.">
+	<meta property="og:image" content="https://alicia-brandon.ferchonte.com/src/assets/casados/hero-casamiento.webp">
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
 
-<style>
+<style is:global>
 	html,
 	body {
 		margin: 0;
 		width: 100%;
 		height: 100%;
+		font-family: 'Raleway', sans-serif;
 	}
 </style>
